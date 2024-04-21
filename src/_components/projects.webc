@@ -1,0 +1,24 @@
+<ul role="list">
+	<li webc:for="p of projects" class="flow">
+		<h2 @text="p.name"></h2>
+		<p @text="p.description"></p>
+		<p webc:if="p.url">
+			<a :href="p.url" @text="p.linkLabel ?? 'Check out'"></a>
+		</p>
+		<p webc:else><span>Coming soon</span></p>
+	</li>
+</ul>
+
+<style webc:scoped>
+	ul {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 30ch), 1fr));
+		grid-template-rows: masonry;
+		padding-inline-start: 0;
+		gap: var(--space-m-l);
+	}
+
+	h2 {
+		font-weight: bold;
+	}
+</style>

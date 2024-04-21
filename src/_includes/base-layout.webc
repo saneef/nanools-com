@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>nanools</title>
+
+		<link rel="stylesheet" href="styles/reset.css" />
+		<link rel="stylesheet" href="styles/base/variables.css" />
+		<link rel="stylesheet" href="styles/base/html.css" />
+		<link rel="stylesheet" href="styles/compositions/flow.css" />
+		<link rel="stylesheet" href="styles/compositions/wrapper.css" />
+		<link rel="stylesheet" href="styles/utilities/region.css" />
+		<style @raw="getBundle('css')" webc:keep></style>
+	</head>
+	<body>
+		<template @raw="content" webc:nokeep></template>
+	</body>
+</html>

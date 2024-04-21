@@ -1,0 +1,13 @@
+<style webc:scoped>
+	:host {
+		position: sticky;
+		top: 100vh;
+		padding-block: var(--space-m);
+	}
+</style>
+
+<footer webc:root="override">
+	<div class="wrapper">
+		<slot></slot>
+	</div>
+</footer>
