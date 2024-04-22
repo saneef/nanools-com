@@ -1,13 +1,16 @@
 <style webc:scoped>
 	:host {
+		--region-space-y: var(--space-xs-s);
+
 		position: sticky;
 		top: 100vh;
-		padding-block: var(--space-m);
+		top: 100dvh;
+		margin-block-start: var(--space-s-l);
 	}
 </style>
 
 <footer webc:root="override">
-	<div class="wrapper">
+	<div class="region">
 		<slot></slot>
 	</div>
 </footer>

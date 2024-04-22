@@ -3,5 +3,20 @@ REGION UTILITY
 Consistent block padding for page sections
 */
 .region {
-	padding-block: var(--region-space, var(--space-xl-2xl));
+	--_region-border-width: var(--border-width-m);
+	--_region-space-y: var(
+		--region-space-y,
+		var(--space-s-l) var(--space-2xl-3xl)
+	);
+	--_region-space-x: var(--region-space-x, var(--space-s-l));
+	position: relative;
+	top: calc(-1 * var(--_region-border-width));
+	border-top: var(--_region-border-width) solid var(--border-color);
+	padding-block: var(--_region-space-y);
+	padding-inline: var(--_region-space-x);
+}
+
+.region-space-zero {
+	--region-space-y: 0;
+	--region-space-x: 0;
 }

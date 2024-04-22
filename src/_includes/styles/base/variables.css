@@ -39,7 +39,18 @@
 
 :root {
 	--color-dark: hsl(0 0% 5%);
-	--color-dark-glare: hsl(0 0% 15%);
+	--color-dark-glare: hsl(0 0% 50%);
 	--color-light: hsl(0 0% 95%);
-	--color-light-shade: hsl(0 0% 97.5%);
+	--color-light-shade: hsl(0 0% 85%);
+
+	--border-color: var(--color-light-shade);
+	--border-width-l: var(--space-3xs-2xs);
+	--border-width-m: 3px;
+	--border-width-s: 1px;
+}
+
+:root {
+	--wrapper-max-width: 75ch;
+	--page-max-width: var(--wrapper-max-width);
+	--gutter: var(--space-s-l);
 }

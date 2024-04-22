@@ -1,0 +1,21 @@
+.button {
+	--_button-background-color: var(--button-background-color, var(--color-dark));
+	--_button-color: var(--button-color, var(--color-light));
+	--outline-color: var(--_button-background-color);
+
+	all: unset;
+	display: inline-flex;
+	color: var(--_button-color);
+	background-color: var(--_button-background-color);
+	padding: var(--space-3xs) var(--space-xs);
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 2000px;
+	cursor: pointer;
+}
+
+.button[data-button-style="faux"] {
+	--button-background-color: var(--color-light-shade);
+	--button-color: var(--color-dark);
+	cursor: not-allowed;
+}

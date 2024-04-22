@@ -1,0 +1,9 @@
+.page {
+	position: relative;
+	margin-inline: var(--space-s-l);
+	max-width: clamp(16rem, var(--page-max-width, 100vw), 80rem);
+	min-height: 100%;
+	border: var(--border-width-m) solid var(--border-color);
+	border-top: 0;
+	border-bottom: 0;
+}

@@ -1,24 +1,58 @@
 <ul role="list">
-	<li webc:for="p of projects" class="flow">
+	<li webc:for="p of projects" class="project flow">
 		<h2 @text="p.name"></h2>
 		<p @text="p.description"></p>
 		<p webc:if="p.url">
-			<a :href="p.url" @text="p.linkLabel ?? 'Check out'"></a>
+			<a class="button" :href="p.url">
+				<span @text="p.linkLabel ?? 'Check out'"></span>
+				<span class="arrow" aria-hidden="true">→</span>
+			</a>
 		</p>
-		<p webc:else><span>Coming soon</span></p>
+		<p webc:else>
+			<span class="button" data-button-style="faux">Coming soon</span>
+		</p>
 	</li>
 </ul>
 
 <style webc:scoped>
 	ul {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(min(100%, 30ch), 1fr));
-		grid-template-rows: masonry;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 20ch), 1fr));
 		padding-inline-start: 0;
-		gap: var(--space-l-xl) var(--space-m-l);
+		margin: 0;
 	}
 
 	h2 {
 		font-weight: bold;
+	}
+
+	.project {
+		--_project-border-width: var(--border-width-m);
+
+		position: relative;
+		padding: var(--space-s-l);
+	}
+	.project:before,
+	.project:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		background-color: var(--border-color);
+		width: var(--_project-border-width);
+		height: var(--_project-border-width);
+	}
+	.project:before {
+		left: 0;
+		width: 100%;
+	}
+	.project:after {
+		left: 100%;
+
+		width: var(--_project-border-width);
+		height: 100%;
+	}
+
+	.arrow {
+		margin-inline-start: var(--space-3xs);
 	}
 </style>

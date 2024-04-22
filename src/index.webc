@@ -2,21 +2,20 @@
 layout: base-layout.webc
 ---
 
-<div class="wrapper">
-	<main>
-		<div class="region flow">
-			<h1>
-				<span aria-hidden="true"><logo></logo></span>
-				<visually-hidden>Nanools</visually-hidden>
-			</h1>
-			<p>A collection of nano-sized tools for web designers.</p>
-		</div>
+<main>
+	<div class="region flow">
+		<h1>
+			<span aria-hidden="true"><logo></logo></span>
+			<visually-hidden>Nanools</visually-hidden>
+		</h1>
+		<p class="intro">A collection of nano-sized tools for web designers.</p>
+	</div>
 
-		<div class="region">
-			<projects :@projects="projects"></projects>
-		</div>
-	</main>
-</div>
+	<div class="region region-space-zero">
+		<projects :@projects="projects"></projects>
+	</div>
+</main>
+
 <page-layout-footer>
 	<p>
 		<template @text="`© ${(new Date()).getFullYear()}`" webc:nokeep></template>
@@ -27,5 +26,9 @@ layout: base-layout.webc
 <style webc:scoped>
 	h1 {
 		margin-top: 0;
+	}
+
+	.intro {
+		text-wrap: balance;
 	}
 </style>
