@@ -6,7 +6,7 @@
 		"build": "NODE_ENV=production eleventy --quiet",
 		"dev": "eleventy --quiet --serve"
 	},
-	"license": "ISC",
+	"license": "MIT",
 	"devDependencies": {
 		"@11ty/eleventy": "3.0.0-alpha.6",
 		"@11ty/eleventy-plugin-bundle": "^1.0.5",
