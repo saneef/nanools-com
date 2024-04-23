@@ -2,5 +2,6 @@
   description: Create accessible color systems in Okhsl color spaces.
   url: https://colorcolor.in/
   linkLabel: Create palettes
-- name: Tokens
+- name: Design Token to CSS
   description: Convert JSON design tokens to CSS custom properties and utility classes.
+  url: https://tokens2css.nanools.com
