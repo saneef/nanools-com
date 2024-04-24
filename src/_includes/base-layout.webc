@@ -21,6 +21,8 @@
 			src="js/plausible.js"
 			webc:keep
 		></script>
+
+		<link rel="icon" href="/icon.svg" type="image/svg+xml" />
 	</head>
 	<body>
 		<div class="page">

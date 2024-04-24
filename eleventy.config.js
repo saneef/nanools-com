@@ -17,6 +17,9 @@ export default function (eleventyConfig) {
 	eleventyConfig.addPlugin(htmlTransforms);
 	eleventyConfig.addPlugin(cssTransforms);
 
+	// Copy files static files
+	eleventyConfig.addPassthroughCopy({ [`${INPUT_DIR}/public`]: "." });
+
 	return {
 		dir: { input: INPUT_DIR, output: OUTPUT_DIR },
 	};
