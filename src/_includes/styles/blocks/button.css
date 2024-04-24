@@ -1,17 +1,31 @@
 .button {
-	--_button-background-color: var(--button-background-color, var(--color-dark));
-	--_button-color: var(--button-color, var(--color-light));
-	--outline-color: var(--_button-background-color);
+	--_button-background-color: var(--button-background-color, transparent);
+	--_button-color: var(--button-color, var(--color-dark));
 
 	all: unset;
-	display: inline-flex;
-	color: var(--_button-color);
 	background-color: var(--_button-background-color);
-	padding: var(--space-3xs) var(--space-xs);
-	font-weight: bold;
-	text-decoration: none;
+	border: var(--border-width-m) solid;
 	border-radius: 2000px;
+	color: var(--_button-color);
 	cursor: pointer;
+	display: inline-flex;
+	font-weight: bold;
+	padding: var(--space-3xs) var(--space-xs);
+	text-decoration: none;
+}
+
+.button:hover,
+.button:focus,
+.button:focus-visible,
+.button:visible {
+	--_button-background-color: var(
+		--button-hover-background-color,
+		var(--color-light-shade)
+	);
+}
+
+.button:active {
+	transform: scale(0.975);
 }
 
 .button[data-button-style="faux"] {
