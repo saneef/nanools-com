@@ -3,7 +3,7 @@
   url: https://colorcolor.in/
   linkLabel: Create palettes
 
-- name: Design Token to CSS
+- name: Design Tokens to CSS
   description: Convert JSON design tokens to CSS custom properties and utility classes.
   url: https://tokens2css.nanools.com
 
