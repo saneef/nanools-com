@@ -19,4 +19,5 @@ Consistent block padding for page sections
 .region-space-zero {
 	--region-space-y: 0;
 	--region-space-x: 0;
+	margin-block-end: calc(-1 * var(--_region-border-width));
 }

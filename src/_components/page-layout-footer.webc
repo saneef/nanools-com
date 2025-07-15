@@ -5,7 +5,6 @@
 		position: sticky;
 		top: 100vh;
 		top: 100dvh;
-		margin-block-start: var(--space-s-l);
 	}
 </style>
 
