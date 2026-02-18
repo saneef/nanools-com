@@ -15,13 +15,6 @@
 		<link rel="stylesheet" href="styles/utilities/region.css" />
 		<style @raw="getBundle('css')" webc:keep></style>
 
-		<script
-			defer
-			data-domain="nanools.com"
-			src="js/plausible.js"
-			webc:keep
-		></script>
-
 		<link rel="icon" href="/icon.svg" type="image/svg+xml" />
 	</head>
 	<body>

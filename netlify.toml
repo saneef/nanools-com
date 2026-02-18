@@ -1,17 +1,3 @@
 [build]
-  command = "pnpm run build"
-  publish = "dist"
-
-##
-## REDIRECTS
-##
-
-# Plausible analytics
-[[redirects]]
-  from = "/js/plausible.js"
-  to = "https://plausible.io/js/plausible.js"
-  status = 200
-[[redirects]]
-  from = "/api/event"
-  to = "https://plausible.io/api/event"
-  status = 200
+	command = "pnpm run build"
+	publish = "dist"
